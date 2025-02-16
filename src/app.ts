@@ -116,29 +116,32 @@ class BankAccount {
 
     deposit(amount: number): void {
         if (amount <= 0) {
-            throw new Error("Deposit amount must be positive.");
+            console.log("Deposit amount must be positive.");
+            ;
         }
         this.balance += amount;
     }
 
     withdraw(amount: number): void {
         if (amount <= 0) {
-            throw new Error("Withdrawal amount must be positive.");
+            console.log("Withdrawal amount must be positive.");
+            ;
         }
         if (amount > this.balance) {
-            throw new Error("Insufficient funds. Cannot withdraw more than the available balance.");
+            console.log("Insufficient funds. Cannot withdraw more than the available balance.");
+            ;
         }
         this.balance -= amount;
     }
 }
 
-const account = new BankAccount("123456789", 1000);
+const account = new BankAccount("4568126389", 1000);
 console.log("Question 04");
 
 console.log(`Account Number: ${account.getAccountNumber}`);
 console.log(`Initial Balance: $${account.getBalance}`);
 
-account.deposit(500);
+account.deposit(0);
 console.log(`Balance after deposit: $${account.getBalance}`);
 
 account.withdraw(200);
