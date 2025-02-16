@@ -1,6 +1,7 @@
 // Create an interface called User with properties for id (number), name (string), email (string), and
 // isActive (boolean). Then, create a function called createUser that takes a user object of type
 // User and returns it. Finally, write code to create a new user and call the function.
+
 interface User {
     name:string,
     id:number,
@@ -16,6 +17,7 @@ let User = createUser({
     email:'abc@email.com',
     isActive:false
 })
+console.log("Question 01");
 console.log(User);
 
 
@@ -23,12 +25,12 @@ console.log(User);
 // processInput that takes an argument of type Input and returns a string. If the input is a number,
 // convert it to a string and prepend &quot;Number: &quot; to it. If the input is already a string, prepend
 // &quot;String: &quot; to it. Use type guards to check the type of input.
-
 type Input = string | number
 function processInput(input:Input){
     return typeof input == 'number'? `Number: ${input.toString()}`  :`String: ${input}` 
 }
 let userInput = processInput(5)
+console.log("Question 02");
 console.log(userInput);
 
 // Create a base class called Vehicle with properties for make (string), model (string), and year
@@ -76,6 +78,7 @@ class Motorcycle extends Vehicle{
 }
 let car = new Car('Honda','Civic',2023,4)
 let motorcycle = new Motorcycle('Harley-Davidson', 'Sportster', 2022, true)
+console.log("Question 03");
 console.log(car.getInfo());
 console.log(motorcycle.getInfo());
 
@@ -92,9 +95,6 @@ console.log(motorcycle.getInfo());
 // overdrafts by throwing an error if the amount is greater than the balance
 // Test the class by creating an account, making deposits and withdrawals, and trying to access
 // the private properties directly.
-
-
-
 
 
 class BankAccount {
@@ -133,6 +133,7 @@ class BankAccount {
 }
 
 const account = new BankAccount("123456789", 1000);
+console.log("Question 04");
 
 console.log(`Account Number: ${account.getAccountNumber}`);
 console.log(`Initial Balance: $${account.getBalance}`);
@@ -199,6 +200,7 @@ class Rectangle extends Shape {
 
 const circle = new Circle("red", 5);
 const rectangle = new Rectangle("blue", 4, 6);
+console.log("Question 05");
 
 console.log(`Circle color: ${circle.getColor()}, Area: ${circle.calculateArea().toFixed(2)}`);
 console.log(`Rectangle color: ${rectangle.getColor()}, Area: ${rectangle.calculateArea()}`);

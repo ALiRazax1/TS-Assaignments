@@ -1,4 +1,7 @@
 "use strict";
+// Create an interface called User with properties for id (number), name (string), email (string), and
+// isActive (boolean). Then, create a function called createUser that takes a user object of type
+// User and returns it. Finally, write code to create a new user and call the function.
 function createUser(user) {
     return user;
 }
@@ -8,11 +11,13 @@ let User = createUser({
     email: 'abc@email.com',
     isActive: false
 });
+console.log("Question 01");
 console.log(User);
 function processInput(input) {
     return typeof input == 'number' ? `Number: ${input.toString()}` : `String: ${input}`;
 }
 let userInput = processInput(5);
+console.log("Question 02");
 console.log(userInput);
 // Create a base class called Vehicle with properties for make (string), model (string), and year
 // (number). Include a method called getInfo() that returns a string with the vehicle information.
@@ -54,6 +59,7 @@ class Motorcycle extends Vehicle {
 }
 let car = new Car('Honda', 'Civic', 2023, 4);
 let motorcycle = new Motorcycle('Harley-Davidson', 'Sportster', 2022, true);
+console.log("Question 03");
 console.log(car.getInfo());
 console.log(motorcycle.getInfo());
 // Create a class called BankAccount with:
@@ -97,6 +103,7 @@ class BankAccount {
     }
 }
 const account = new BankAccount("123456789", 1000);
+console.log("Question 04");
 console.log(`Account Number: ${account.getAccountNumber}`);
 console.log(`Initial Balance: $${account.getBalance}`);
 account.deposit(500);
@@ -146,5 +153,6 @@ class Rectangle extends Shape {
 }
 const circle = new Circle("red", 5);
 const rectangle = new Rectangle("blue", 4, 6);
+console.log("Question 05");
 console.log(`Circle color: ${circle.getColor()}, Area: ${circle.calculateArea().toFixed(2)}`);
 console.log(`Rectangle color: ${rectangle.getColor()}, Area: ${rectangle.calculateArea()}`);
